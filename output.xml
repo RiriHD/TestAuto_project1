@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.8 on win32)" generated="20210817 15:41:06.867" rpa="false" schemaversion="2">
+<suite id="s1" name="Login Tests" source="C:\Users\admin\Documents\testAuto\Test_robots\Projet1\login_tests">
+<suite id="s1-s1" name="Gherkin Login" source="C:\Users\admin\Documents\testAuto\Test_robots\Projet1\login_tests\gherkin_login.robot">
+<test id="s1-s1-t1" name="Valid Login">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210817 15:41:07.576" level="INFO">Opening browser 'Chrome' to base url 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:07.576" endtime="20210817 15:41:12.984"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210817 15:41:12.984" endtime="20210817 15:41:13.357"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210817 15:41:13.357" endtime="20210817 15:41:13.359"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:13.364" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:13.359" endtime="20210817 15:41:13.364"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:13.359" endtime="20210817 15:41:13.365"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:07.575" endtime="20210817 15:41:13.365"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:07.574" endtime="20210817 15:41:13.365"/>
+</kw>
+<kw name="When user &quot;rihabhamdi2013@gmail.com&quot; logs in with password &quot;Tokj2874&quot;" sourcename="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+<kw name="Input Username" library="resource">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:13.368" level="INFO">Typing text 'rihabhamdi2013@gmail.com' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:13.367" endtime="20210817 15:41:13.566"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:13.367" endtime="20210817 15:41:13.566"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:13.567" level="INFO">Typing text 'Tokj2874' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:13.567" endtime="20210817 15:41:13.731"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:13.567" endtime="20210817 15:41:13.732"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:13.733" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:13.732" endtime="20210817 15:41:13.846"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:13.732" endtime="20210817 15:41:13.846"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:13.366" endtime="20210817 15:41:13.847"/>
+</kw>
+<kw name="Then welcome page should be open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210817 15:41:13.864" level="INFO">Page title is 'AGTS'.</msg>
+<status status="PASS" starttime="20210817 15:41:13.849" endtime="20210817 15:41:13.864"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:13.848" endtime="20210817 15:41:13.864"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210817 15:41:13.865" endtime="20210817 15:41:16.174"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:07.573" endtime="20210817 15:41:16.175"/>
+</test>
+<status status="PASS" starttime="20210817 15:41:06.943" endtime="20210817 15:41:16.176"/>
+</suite>
+<suite id="s1-s2" name="Invalid Login" source="C:\Users\admin\Documents\testAuto\Test_robots\Projet1\login_tests\invalid_login.robot">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210817 15:41:16.183" level="INFO">Opening browser 'Chrome' to base url 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:16.183" endtime="20210817 15:41:19.547"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210817 15:41:19.547" endtime="20210817 15:41:19.949"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210817 15:41:19.950" endtime="20210817 15:41:19.950"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:19.976" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:19.952" endtime="20210817 15:41:19.976"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:19.951" endtime="20210817 15:41:19.977"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:16.183" endtime="20210817 15:41:19.977"/>
+</kw>
+<test id="s1-s2-t1" name="Invalid Username">
+<kw name="Go To Login Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210817 15:41:19.985" level="INFO">Opening url 'https://agts.etcinfo.fr/auth/login'</msg>
+<status status="PASS" starttime="20210817 15:41:19.984" endtime="20210817 15:41:20.623"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:20.635" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:20.625" endtime="20210817 15:41:20.635"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:20.623" endtime="20210817 15:41:20.635"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:19.983" endtime="20210817 15:41:20.636"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arg>invalid</arg>
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Username" library="resource">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:20.639" level="INFO">Typing text 'invalid' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:20.638" endtime="20210817 15:41:20.800"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:20.638" endtime="20210817 15:41:20.801"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:20.804" level="INFO">Typing text 'Tokj2866' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:20.803" endtime="20210817 15:41:20.982"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:20.801" endtime="20210817 15:41:20.983"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:20.985" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:20.984" endtime="20210817 15:41:21.113"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:20.983" endtime="20210817 15:41:21.113"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:21.135" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:21.114" endtime="20210817 15:41:21.135"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.114" endtime="20210817 15:41:21.135"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:20.637" endtime="20210817 15:41:21.136"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:19.977" endtime="20210817 15:41:21.136"/>
+</test>
+<test id="s1-s2-t2" name="Invalid Password">
+<kw name="Go To Login Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210817 15:41:21.140" level="INFO">Opening url 'https://agts.etcinfo.fr/auth/login'</msg>
+<status status="PASS" starttime="20210817 15:41:21.139" endtime="20210817 15:41:21.620"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:21.625" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:21.621" endtime="20210817 15:41:21.625"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.621" endtime="20210817 15:41:21.626"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.139" endtime="20210817 15:41:21.626"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arg>${VALID USER}</arg>
+<arg>Olkj12356</arg>
+<kw name="Input Username" library="resource">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:21.628" level="INFO">Typing text 'rihabhamdi2013@gmail.com' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:21.628" endtime="20210817 15:41:21.796"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.627" endtime="20210817 15:41:21.796"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:21.798" level="INFO">Typing text 'Olkj12356' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:21.797" endtime="20210817 15:41:21.925"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.797" endtime="20210817 15:41:21.925"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:21.927" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:21.926" endtime="20210817 15:41:22.048"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.925" endtime="20210817 15:41:22.048"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:22.062" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:22.049" endtime="20210817 15:41:22.062"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.048" endtime="20210817 15:41:22.063"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.627" endtime="20210817 15:41:22.063"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:21.137" endtime="20210817 15:41:22.063"/>
+</test>
+<test id="s1-s2-t3" name="Invalid Username And Password">
+<kw name="Go To Login Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210817 15:41:22.065" level="INFO">Opening url 'https://agts.etcinfo.fr/auth/login'</msg>
+<status status="PASS" starttime="20210817 15:41:22.065" endtime="20210817 15:41:22.691"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:22.697" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:22.692" endtime="20210817 15:41:22.697"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.691" endtime="20210817 15:41:22.697"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.064" endtime="20210817 15:41:22.697"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arg>invalid</arg>
+<arg>whatever</arg>
+<kw name="Input Username" library="resource">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:22.703" level="INFO">Typing text 'invalid' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:22.702" endtime="20210817 15:41:22.813"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.699" endtime="20210817 15:41:22.813"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:22.814" level="INFO">Typing text 'whatever' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:22.814" endtime="20210817 15:41:22.929"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.813" endtime="20210817 15:41:22.929"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:22.930" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:22.930" endtime="20210817 15:41:22.998"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.929" endtime="20210817 15:41:22.999"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:23.011" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:23.000" endtime="20210817 15:41:23.011"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.999" endtime="20210817 15:41:23.011"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.698" endtime="20210817 15:41:23.012"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:22.064" endtime="20210817 15:41:23.013"/>
+</test>
+<test id="s1-s2-t4" name="Empty Username">
+<kw name="Go To Login Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210817 15:41:23.019" level="INFO">Opening url 'https://agts.etcinfo.fr/auth/login'</msg>
+<status status="PASS" starttime="20210817 15:41:23.018" endtime="20210817 15:41:23.655"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:23.666" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:23.657" endtime="20210817 15:41:23.667"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:23.656" endtime="20210817 15:41:23.667"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:23.017" endtime="20210817 15:41:23.668"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Username" library="resource">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:23.677" level="INFO">Typing text '' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:23.676" endtime="20210817 15:41:23.805"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:23.675" endtime="20210817 15:41:23.805"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:23.808" level="INFO">Typing text 'Tokj2866' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:23.807" endtime="20210817 15:41:23.914"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:23.806" endtime="20210817 15:41:23.914"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:23.916" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:23.915" endtime="20210817 15:41:24.004"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:23.915" endtime="20210817 15:41:24.004"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:24.010" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:24.005" endtime="20210817 15:41:24.011"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.004" endtime="20210817 15:41:24.011"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:23.672" endtime="20210817 15:41:24.011"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:23.015" endtime="20210817 15:41:24.012"/>
+</test>
+<test id="s1-s2-t5" name="Empty Password">
+<kw name="Go To Login Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210817 15:41:24.015" level="INFO">Opening url 'https://agts.etcinfo.fr/auth/login'</msg>
+<status status="PASS" starttime="20210817 15:41:24.014" endtime="20210817 15:41:24.423"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:24.432" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:24.424" endtime="20210817 15:41:24.433"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.423" endtime="20210817 15:41:24.433"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.014" endtime="20210817 15:41:24.434"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arg>${VALID USER}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Username" library="resource">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:24.439" level="INFO">Typing text 'rihabhamdi2013@gmail.com' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:24.439" endtime="20210817 15:41:24.589"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.438" endtime="20210817 15:41:24.589"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:24.591" level="INFO">Typing text '' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:24.591" endtime="20210817 15:41:24.677"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.590" endtime="20210817 15:41:24.678"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:24.680" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:24.679" endtime="20210817 15:41:24.791"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.678" endtime="20210817 15:41:24.791"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:24.814" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:24.793" endtime="20210817 15:41:24.814"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.792" endtime="20210817 15:41:24.815"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.435" endtime="20210817 15:41:24.815"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.013" endtime="20210817 15:41:24.816"/>
+</test>
+<test id="s1-s2-t6" name="Empty Username And Password">
+<kw name="Go To Login Page" library="resource" type="SETUP">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210817 15:41:24.822" level="INFO">Opening url 'https://agts.etcinfo.fr/auth/login'</msg>
+<status status="PASS" starttime="20210817 15:41:24.821" endtime="20210817 15:41:25.311"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:25.316" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:25.311" endtime="20210817 15:41:25.316"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:25.311" endtime="20210817 15:41:25.316"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.820" endtime="20210817 15:41:25.316"/>
+</kw>
+<kw name="Login With Invalid Credentials Should Fail">
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<kw name="Input Username" library="resource">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:25.321" level="INFO">Typing text '' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:25.320" endtime="20210817 15:41:25.407"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:25.319" endtime="20210817 15:41:25.408"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:25.409" level="INFO">Typing text '' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:25.409" endtime="20210817 15:41:25.556"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:25.408" endtime="20210817 15:41:25.557"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:25.558" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:25.558" endtime="20210817 15:41:25.709"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:25.557" endtime="20210817 15:41:25.710"/>
+</kw>
+<kw name="Login Should Have Failed">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ERROR URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:25.716" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:25.710" endtime="20210817 15:41:25.717"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:25.710" endtime="20210817 15:41:25.717"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:25.317" endtime="20210817 15:41:25.718"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:24.819" endtime="20210817 15:41:25.720"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210817 15:41:25.723" endtime="20210817 15:41:28.330"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:16.178" endtime="20210817 15:41:28.330"/>
+</suite>
+<suite id="s1-s3" name="Valid Login" source="C:\Users\admin\Documents\testAuto\Test_robots\Projet1\login_tests\valid_login.robot">
+<test id="s1-s3-t1" name="Valid Login">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210817 15:41:28.341" level="INFO">Opening browser 'Chrome' to base url 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:28.340" endtime="20210817 15:41:31.531"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210817 15:41:31.531" endtime="20210817 15:41:31.947"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210817 15:41:31.947" endtime="20210817 15:41:31.948"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20210817 15:41:31.953" level="INFO">Current location is 'https://agts.etcinfo.fr/auth/login'.</msg>
+<status status="PASS" starttime="20210817 15:41:31.948" endtime="20210817 15:41:31.953"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:31.948" endtime="20210817 15:41:31.954"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:28.340" endtime="20210817 15:41:31.954"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>rihabhamdi2013@gmail.com</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:31.955" level="INFO">Typing text 'rihabhamdi2013@gmail.com' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:31.955" endtime="20210817 15:41:32.136"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:31.954" endtime="20210817 15:41:32.136"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>Tokj2874</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: ${password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:32.138" level="INFO">Typing text 'Tokj2874' into text field 'xpath: /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20210817 15:41:32.138" endtime="20210817 15:41:32.369"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:32.137" endtime="20210817 15:41:32.369"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210817 15:41:32.371" level="INFO">Clicking button 'xpath= /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]'.</msg>
+<status status="PASS" starttime="20210817 15:41:32.371" endtime="20210817 15:41:32.505"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:32.370" endtime="20210817 15:41:32.505"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210817 15:41:32.512" level="INFO">Page title is 'AGTS'.</msg>
+<status status="PASS" starttime="20210817 15:41:32.507" endtime="20210817 15:41:32.512"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:32.506" endtime="20210817 15:41:32.513"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210817 15:41:32.513" endtime="20210817 15:41:34.788"/>
+</kw>
+<status status="PASS" starttime="20210817 15:41:28.339" endtime="20210817 15:41:34.789"/>
+</test>
+<status status="PASS" starttime="20210817 15:41:28.333" endtime="20210817 15:41:34.791"/>
+</suite>
+<status status="PASS" starttime="20210817 15:41:06.874" endtime="20210817 15:41:34.795"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Gherkin Login">Login Tests.Gherkin Login</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s2" name="Invalid Login">Login Tests.Invalid Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Valid Login">Login Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
