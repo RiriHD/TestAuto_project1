@@ -5,7 +5,7 @@ Test Teardown     Close Browser
 *** Test Cases ***
 Valid Login
     Given browser is opened to login page
-    When user "rihabhamdi2013@gmail.com" logs in with password "Tokj2874"
+    When user "agts.etc@gmail.com" logs in with password "AZERTY123"
     Then welcome page should be open
 
 *** Keywords ***
