@@ -4,16 +4,17 @@ Library           SeleniumLibrary
 *** Variables ***
 ${BROWSER}              Chrome
 ${DELAY}                0
-${VALID USER}           rihabhamdi2013@gmail.com
+${VALID USER}           agts.etc@gmail.com
 ${VALID PASSWORD}       Tokj2866
-${LOGIN URL}            https://agts.etcinfo.fr/auth/login
-${WELCOME URL}          https://agts.etcinfo.fr/main/dashboard
-${ERROR URL}            https://agts.etcinfo.fr/auth/login
+${LOGIN URL}            http://192.168.77.75:2500/auth/login
+${WELCOME URL}          http://192.168.77.75:2500/main/dashboard
+${ERROR URL}            http://192.168.77.75:2500/auth/login
 ${username_field}       /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[2]/input
-${password_field}       /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/input
+${password_field}       /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[3]/div/input
 ${login_button}         /html/body/app-root/app-auth/div/app-login/div[1]/div/form/div/div[4]/button[1]
 ${title}                AGTS
 *** Keywords ***
+#fonctions prédéfinies
 Open Browser To Login Page
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
@@ -41,3 +42,4 @@ Submit Credentials
 Welcome Page Should Be Open
     #Location Should Be    ${WELCOME URL}
     Title Should Be    ${title} 
+
