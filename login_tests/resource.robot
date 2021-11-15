@@ -1,7 +1,10 @@
 *** Settings ***
+Documentation     Simple example using SeleniumLibrary.
 Library           SeleniumLibrary
+Library           OperatingSystem
 
 *** Variables ***
+${EXECDIR}              ..${\}chromedriver.exe
 ${BROWSER}              Chrome
 ${DELAY}                0
 ${VALID USER}           agts.etc@gmail.com
@@ -16,6 +19,7 @@ ${title}                AGTS
 *** Keywords ***
 #fonctions prédéfinies
 Open Browser To Login Page
+    Set Environment Variable  webdriver.chrome.driver  ${EXECDIR}
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed    ${DELAY}
@@ -42,4 +46,5 @@ Submit Credentials
 Welcome Page Should Be Open
     #Location Should Be    ${WELCOME URL}
     Title Should Be    ${title} 
+
 
